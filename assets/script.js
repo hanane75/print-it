@@ -20,6 +20,7 @@ const slides = [
   
   let position = 0; 
   const numberOfSlide = slides.length;
+  console.log("le nombres des images est de :"+ numberOfSlide);//console ^pour afficher le nombres d'image du slide
   
   createCaroussel(position);
   createDots();
@@ -51,7 +52,7 @@ const slides = [
 	  createCaroussel(position);
   
   });
-  //fonction pour les points
+  //fonction pour  creation des points
   function createDots(){
 	   const dots = document.querySelector(".dots");	
 	  for (let index = 0; index < slides.length; index++) {
@@ -61,6 +62,7 @@ const slides = [
 		  dots.appendChild(dot);
 	  } 
   }
+  
   
   function updateDot() {
 	const listPoints = document.querySelectorAll(".dot");	
@@ -80,7 +82,7 @@ const slides = [
   function createCaroussel(position){
 	  
 		const element = slides[position];
-		  //console.log(element);
+		  console.log(element);
 		  const img = document.querySelector(".banner-img");
 		  img.setAttribute("src" , "./assets/images/slideshow/"+ element.image);
   
