@@ -39,6 +39,7 @@ const slides = [
 		  position--;
 	  }
 		  createCaroussel(position);
+		  console.log(left);
   });
   
   right.addEventListener("click", function () {
@@ -50,7 +51,7 @@ const slides = [
 	  createCaroussel(position);
   
   });
-  //fonction pour les points 
+  //fonction pour les points
   function createDots(){
 	   const dots = document.querySelector(".dots");	
 	  for (let index = 0; index < slides.length; index++) {
